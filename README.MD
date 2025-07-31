@@ -158,7 +158,8 @@ Os especificadores de formato ajudam a **conectar o conteúdo da variável ao fo
 int idade = 25;
 printf("A minha idade é %i anos.", idade);
 
-´´´
+```
+
 ##Principais Especificadores de Formato em C
 Em C, os especificadores de formato são códigos especiais usados em funções de entrada e saída, como printf() e scanf(), para indicar o tipo de dado que está sendo lido ou escrito. Eles são cruciais para garantir que os dados sejam interpretados e exibidos corretamente.
 
@@ -254,7 +255,7 @@ Exemplo: printf("%05d\n", 123); (Saída: 00123)
 
 Exemplo: printf("%#x\n", 255); (Saída: 0xff)
 
-```
+
 # Operadores Matemáticos em C
 
 Em C, os **operadores matemáticos (ou aritméticos)** são usados para realizar operações entre variáveis e valores, como soma, subtração, multiplicação, etc.
