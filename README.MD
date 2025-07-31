@@ -253,3 +253,103 @@ Exemplo: printf("%05d\n", 123); (Saída: 00123)
 #: Usado com %o, %x, %X para prefixos (0 para octal, 0x/0X para hexadecimal). Para %f, %e, %E, %g, %G, garante que o ponto decimal esteja presente.
 
 Exemplo: printf("%#x\n", 255); (Saída: 0xff)
+
+```
+# Operadores Matemáticos em C
+
+Em C, os **operadores matemáticos (ou aritméticos)** são usados para realizar operações entre variáveis e valores, como soma, subtração, multiplicação, etc.
+
+---
+
+## ✏️ Operadores Básicos
+
+| Operador | Operação       | Exemplo           | Resultado (se `a = 10`, `b = 3`) |
+|----------|----------------|-------------------|----------------------------------|
+| `+`      | Adição         | `a + b`           | 13                               |
+| `-`      | Subtração      | `a - b`           | 7                                |
+| `*`      | Multiplicação  | `a * b`           | 30                               |
+| `/`      | Divisão        | `a / b`           | 3 (divisão inteira)              |
+| `%`      | Módulo         | `a % b`           | 1 (resto da divisão)             |
+
+> **Atenção:** A divisão entre inteiros resulta em um número inteiro (parte decimal é descartada).
+
+---
+
+## 📌 Exemplos de Uso
+
+```c
+int a = 10, b = 3;
+
+int soma = a + b;      // soma = 13
+int sub = a - b;       // sub = 7
+int mult = a * b;      // mult = 30
+int div = a / b;       // div = 3
+int resto = a % b;     // resto = 1
+```
+
+---
+
+## ⚠️ Divisão com números reais
+
+Para obter o resultado com casas decimais, use `float` ou `double`:
+
+```c
+float x = 10.0, y = 3.0;
+float resultado = x / y; // resultado = 3.333...
+```
+
+---
+
+## 🔁 Operadores de Atribuição Combinada
+
+Esses operadores **realizam uma operação e atribuem o resultado** na mesma variável.
+
+| Operador | Equivalente a     | Exemplo         |
+|----------|-------------------|-----------------|
+| `+=`     | `a = a + b`       | `a += b;`       |
+| `-=`     | `a = a - b`       | `a -= b;`       |
+| `*=`     | `a = a * b`       | `a *= b;`       |
+| `/=`     | `a = a / b`       | `a /= b;`       |
+| `%=`     | `a = a % b`       | `a %= b;`       |
+
+---
+
+## ⏫ Incremento e Decremento
+
+| Operador | Descrição               | Exemplo       | Efeito              |
+|----------|-------------------------|---------------|---------------------|
+| `++`     | Incrementa em 1         | `a++` ou `++a`| `a = a + 1`         |
+| `--`     | Decrementa em 1         | `a--` ou `--a`| `a = a - 1`         |
+
+- `a++`: **pós-incremento** (incrementa depois de usar o valor)
+- `++a`: **pré-incremento** (incrementa antes de usar o valor)
+
+---
+
+## ✅ Exemplo Completo:
+
+```c
+#include <stdio.h>
+
+int main() {
+    int a = 10, b = 3;
+
+    printf("Soma: %d\n", a + b);
+    printf("Subtração: %d\n", a - b);
+    printf("Multiplicação: %d\n", a * b);
+    printf("Divisão inteira: %d\n", a / b);
+    printf("Resto da divisão: %d\n", a % b);
+
+    a += 5; // a agora é 15
+    printf("Após a += 5, a = %d\n", a);
+
+    a++; // incremento
+    printf("Após a++, a = %d\n", a);
+
+    return 0;
+}
+```
+
+---
+
+Esses operadores são fundamentais em qualquer linguagem de programação e são amplamente usados em cálculos, laços e condições.
